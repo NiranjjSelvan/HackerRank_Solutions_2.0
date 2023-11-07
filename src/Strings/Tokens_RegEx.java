@@ -6,17 +6,17 @@ public class Tokens_RegEx {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		String s = scan.nextLine();
+		String input = scan.nextLine();
 		scan.close();
 
-		s = removeLeadingNonLetters(s);
+		input = removeLeadingNonLetters(input);
 
-		if (s.length() == 0) {
+		if (input.length() == 0) {
 			System.out.println(0);
 			return;
 		}
 
-		String[] words = s.split("[^a-zA-Z]+");
+		String[] words = input.split("[^a-zA-Z]+");
 
 		System.out.println(words.length);
 		for (String word : words) {
@@ -24,13 +24,13 @@ public class Tokens_RegEx {
 		}
 	}
 
-	private static String removeLeadingNonLetters(String str) {
+	private static String removeLeadingNonLetters(String input) {
 		int i;
-		for (i = 0; i < str.length(); i++) {
-			if (Character.isLetter(str.charAt(i))) {
+		for (i = 0; i < input.length(); i++) {
+			if (Character.isLetter(input.charAt(i))) {
 				break;
 			}
 		}
-		return str.substring(i);
+		return input.substring(i);
 	}
 }
