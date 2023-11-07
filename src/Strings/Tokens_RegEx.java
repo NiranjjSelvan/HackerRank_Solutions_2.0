@@ -8,7 +8,7 @@ public class Tokens_RegEx {
 		Scanner scan = new Scanner(System.in);
 		String input = scan.nextLine();
 		scan.close();
-		String regex = "[A-Za-z]+ ";
+		String regex = "[A-Za-z]+";
 		String[] tokens = input.split(regex);
 		System.out.println(tokens.length);
 		for (String token : tokens) {
