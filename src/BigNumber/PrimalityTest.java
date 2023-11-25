@@ -7,9 +7,9 @@ import java.util.Scanner;
 public class PrimalityTest {
 
 	public static void main(String[] args) throws IOException {
-		Scanner scanner = new Scanner(System.in);
-		BigInteger n = scanner.nextBigInteger();
-		scanner.close();
+		Scanner scan = new Scanner(System.in);
+		BigInteger n = scan.nextBigInteger();
+		scan.close();
 		if (n.isProbablePrime(10)) {
 			System.out.println("prime");
 		} else {
